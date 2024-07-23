@@ -1,0 +1,24 @@
+{
+    "request": {
+      "method": "POST",
+      "url": "/user/deposit",
+      "bodyPatterns": [
+        {
+          "matchesJsonPath": "$.username!=null"  
+        },
+        {
+          "matchesJsonPath": "$.user_email!=null"   
+        },
+        {
+          "matchesJsonPath": "$.amount>0" 
+        }
+      ]
+    },
+    "response": {
+      "status": 201,
+      "body": "{\"new_balance\": 200, \"username\": \"user\", \"user_email\": \"user@test.com\", \"message\": \"201 Created\"}",
+      "headers": {
+        "Content-Type": "application/json"
+      }
+    }
+  }

@@ -1,0 +1,33 @@
+{
+  "request": {
+    "method": "POST",
+    "url": "/create_user",
+    "bodyPatterns": [
+      {
+        "matchesJsonPath": "$.username!=null"
+      },
+      {
+        "matchesJsonPath": "$.password!=null"
+      },
+      {
+        "matchesJsonPath": "$.first_name"
+      },
+      {
+        "matchesJsonPath": "$.last_name"
+      },
+      {
+        "matchesJsonPath": "$.address" 
+      },
+      {
+        "matchesJsonPath": "$.email"
+      }
+    ]
+  },
+  "response": {
+    "status": 201,
+    "body": "{\"message\": \"New User created successfully\", \"status\": \"201 Created\"}",
+    "headers": {
+      "Content-Type": "application/json"
+    }
+  }
+}
