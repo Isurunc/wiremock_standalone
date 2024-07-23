@@ -1,3 +1,3 @@
 wiremock_standalone
 
-API testing with wiremoc standalone
+API testing with wiremock standalone
